@@ -1,7 +1,7 @@
 // alert("JavaScript works!");
 
 // Kevin M. O'Toole
-// Project 2
+// Project 3
 // SDI 1302
 // Functions and Loops
 
