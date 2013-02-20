@@ -10,19 +10,22 @@ var name = "Kevin";
 var money = 25;
 var food = ["2 eggs", "1 milk", "1 bread", "2 water"];
 
+
 console.log(name + " must go to the local store to pick up some groceries." + " His mother only gave him $" + money + " to pick up the items on the list she gave him." + " The things he must pick up are: " + food + "." + " If there is any money left over, " + name + " can buy a snack!");
 
 // Procedure
 var subtraction = function(moneyOnHand, totalSpent) {
 	var moneyLeftOver = moneyOnHand-totalSpent;
 		if (totalSpent < moneyOnHand) {
-			console.log(name + " had $" + moneyLeftOver + " left over after shopping to buy a snack!");
+			console.log(name + " has $" + moneyLeftOver + "0 left over after shopping to buy a snack!");
 		} else {
 			console.log(name + " has no money left over to buy a snack :(");
 		};
+	return moneyLeftOver
 };
 
-subtraction(25,22.50);
+var doIhaveMoney = subtraction(25,22.50);
+//console.log(doIhaveMoney);
 
 // Boolean Function
 var foodCost = function(eggs, milk, bread, water) {
@@ -44,7 +47,8 @@ var foodCost = function(eggs, milk, bread, water) {
 	};*/
 };
 
-foodCost(3,5.50,2,4.50);
+var canBuySnacks = foodCost(3,5.50,2,4.50);
+//console.log(canBuySnacks);
 
 // Number Function
 var spend = function(snackMoney) {
@@ -57,7 +61,8 @@ var spend = function(snackMoney) {
 	return 0;
 };
 
-spend(2.50);
+var allGone = spend(2.50);
+//console.log(allGone);
 
 // String Function
 var finishedShopping = function(home, doChores) {
@@ -68,29 +73,39 @@ var finishedShopping = function(home, doChores) {
 
 };
 
-finishedShopping("After I am done shopping, I must go home.","I have to do my chores.");
+var afterShopping = finishedShopping("After I am done shopping, I must go home.","I have to do my chores.");
+//console.log(afterShopping);
 
 // Array Function
-var cartoons = function(name, time) {
+var cartoons = function(howMany, time) {
 	var cartoonName = ["He-Man", "Thundercats"];
-	var timeLeft = time-30;
-		console.log("Since I've completed my chores i have " + time + " to watch my " + name + " farvorite cartoons and eat my snacks from the store, before bed.");
+	cartoonName.push("G.I. Joe");
+		console.log("Since I've completed my chores i have " + time + " minutes to watch my " + cartoonName.length + " farvorite cartoons and eat my snacks from the store, before bed.");
 	for (var i=0, c=cartoonName.length; i < c; i++) {
+		var timeLeft = time-=30;
+		if (timeLeft >= 0) {
 		console.log("After I watch " + cartoonName[i] + ", I have " + timeLeft + " minutes left before bed!"); 
+		} else {
+		console.log("I have no time left to watch " + cartoonName[2] + "!");
+		};
 	};
 
 	var bed = "Snacks were great, cartoons were awesome, now time for bed!";
-console.log(bed);
-
+	console.log(bed);
+	
 return bed;	
 
 };
-
-cartoons(2,60);
+var timeForBed = cartoons(2,60);
+//console.log(timeForBed);
 
 // Returned Variables
 
-
+console.log("Money left: " + doIhaveMoney);
+console.log("Is it true that i have money left: " + canBuySnacks);
+console.log("How much do i have after buying snacks: " + allGone);
+console.log("If chores are complete: " + afterShopping);
+console.log(timeForBed);
 
 
 
