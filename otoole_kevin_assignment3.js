@@ -21,11 +21,9 @@ var subtraction = function(moneyOnHand, totalSpent) {
 		} else {
 			console.log(name + " has no money left over to buy a snack :(");
 		};
-	return moneyLeftOver
 };
 
-var doIhaveMoney = subtraction(25,22.50);
-//console.log(doIhaveMoney);
+subtraction(25,22.50);
 
 // Boolean Function
 var foodCost = function(eggs, milk, bread, water) {
@@ -86,7 +84,7 @@ var cartoons = function(howMany, time) {
 		if (timeLeft >= 0) {
 		console.log("After I watch " + cartoonName[i] + ", I have " + timeLeft + " minutes left before bed!"); 
 		} else {
-		console.log("I have no time left to watch " + cartoonName[2] + "!");
+		console.log("I have no time left to watch cartoons!");
 		};
 	};
 
@@ -96,12 +94,10 @@ var cartoons = function(howMany, time) {
 return bed;	
 
 };
-var timeForBed = cartoons(2,60);
+var timeForBed = cartoons(2,90);
 //console.log(timeForBed);
 
 // Returned Variables
-
-console.log("Money left: " + doIhaveMoney);
 console.log("Is it true that i have money left: " + canBuySnacks);
 console.log("How much do i have after buying snacks: " + allGone);
 console.log("If chores are complete: " + afterShopping);
