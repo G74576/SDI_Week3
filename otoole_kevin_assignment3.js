@@ -9,10 +9,6 @@
 var name = "Kevin";
 var money = 25;
 var food = ["2 eggs", "1 milk", "1 bread", "2 water"];
-
-console.log(name + " must go to the local store to pick up some groceries." + " His mother only gave him $" + money + " to pick up the items on the list she gave him." + " The things he must pick up are: " + food + "." + " If there is any money left over, " + name + " can buy a snack!");
-
-// Objects
 var groceries = {
 	"dairy": "Milk",
 	"produce": "Eggs",
@@ -20,6 +16,20 @@ var groceries = {
 	"drinks": "Water"
 };
 
+console.log(name + " must go to the local store to pick up some groceries." + " His mother only gave him $" + money + " to pick up the items on the list she gave him." + " The things he must pick up are: " + food + "." + " If there is any money left over, " + name + " can buy a snack!");
+
+// Json
+	console.log("Mom's Grocery List:");
+var handleData = function(json) {
+	for (var i = 0; i < json.groceries.length; i++) {
+		var grocery = json.groceries[i];
+		console.log("Department: " + grocery.department + ", Item: " + grocery.item + ", Quantity: " + grocery.quantity);
+	};
+};
+
+handleData(json2);
+
+// Objects Function
 var groceryList = function() {
 	for (var key in groceries) {
 	console.log("At the grocery store i must go to the " + key + " section, and pick up " + groceries[key]);
