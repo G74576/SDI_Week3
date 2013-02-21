@@ -10,8 +10,36 @@ var name = "Kevin";
 var money = 25;
 var food = ["2 eggs", "1 milk", "1 bread", "2 water"];
 
-
 console.log(name + " must go to the local store to pick up some groceries." + " His mother only gave him $" + money + " to pick up the items on the list she gave him." + " The things he must pick up are: " + food + "." + " If there is any money left over, " + name + " can buy a snack!");
+
+// Objects
+var groceries = {
+	"dairy": "Milk",
+	"produce": "Eggs",
+	"bakery": "Bread",
+	"drinks": "Water"
+};
+
+var groceryList = function() {
+	for (var key in groceries) {
+	console.log("At the grocery store i must go to the " + key + " section, and pick up " + groceries[key]);
+	};
+	return "Picked up all the groceries my mom wanted me to get.";
+};
+
+var newGroceryList = function(newDairy,newProduce,newBakery,newDrinks) {
+	groceries.dairy = newDairy;
+	groceries.produce = newProduce;
+	groceries.bakery = newBakery;
+	groceries.drinks = newDrinks;
+	for (var key in groceries) {
+	console.log("At the grocery store i must go to the " + key + " section, and now pick up " + groceries[key]);
+	};
+	return "Picked up all the groceries my mom wanted me to get.";	
+};
+
+var list = groceryList();
+var newList = newGroceryList("1 Milk","2 Eggs","1 Bread","2 Water");
 
 // Procedure
 var subtraction = function(moneyOnHand, totalSpent) {
@@ -98,11 +126,8 @@ var timeForBed = cartoons(2,90);
 //console.log(timeForBed);
 
 // Returned Variables
+console.log(newList);
 console.log("Is it true that i have money left: " + canBuySnacks);
 console.log("How much do i have after buying snacks: " + allGone);
 console.log("If chores are complete: " + afterShopping);
 console.log(timeForBed);
-
-
-
-
