@@ -44,6 +44,9 @@ var newGroceryList = function(newDairy,newProduce,newBakery,newDrinks) {
 	groceries.drinks = newDrinks;
 	for (var key in groceries) {
 	console.log("At the grocery store i must go to the " + key + " section, and now pick up " + groceries[key]);
+		for (var i = 0, g=groceries.lenght; i < g; i--) {
+			console.log("I have " + groceries[i] + " things to pick up!");
+		};	
 	};
 	return "Picked up all the groceries my mom wanted me to get.";	
 };
@@ -91,6 +94,11 @@ var spend = function(snackMoney) {
 	while (snackMoney > 0) {
 	console.log("I have " + snackMoney + " left to buy snacks!");
 	snackMoney--;
+		var snacksLeft = 3;
+		while (snacksLeft > 0) {
+			console.log("I can get " + snacksLeft + " snacks!");
+			snacksLeft--;
+		};
 	};
 	console.log("I have no more money to buy snacks!");
 	
